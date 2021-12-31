@@ -1,12 +1,15 @@
 <template>
-    <div>
-        <ul>
-            <li v-for="(todo, index) in todoList" :key="index">
-                <p>{{ todo.name }}</p>
-                <p>{{ todo.description }}</p>
-            </li>
-        </ul>
-    </div>
+    <DataTable :value="todoList">
+        <Column field="name" header="name" />
+        <Column field="description" header="description" />
+        <Column field="id" header="edit">
+            <template #body="slot">
+                <a :href="slot.data.id">
+                    <i class="pi pi-pencil"></i>
+                </a>
+            </template>
+        </Column>
+    </DataTable>
 </template>
 
 <script lang="ts">

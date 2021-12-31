@@ -13,9 +13,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "core-js": "^3.6.5",
+    "primeflex": "^2.0.0",
+    "primeicons": "^5.0.0",
+    "primevue": "^3.10.0",
     "typescript": "^4.5.4",
-    "vue": "^3.2.26",
-    "core-js": "^3.6.5"
+    "vue": "^3.2.26"
   },
   "devDependencies": {
     "@types/jest": "^27.0.3",
