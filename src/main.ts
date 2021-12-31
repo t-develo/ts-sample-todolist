@@ -14,4 +14,8 @@ import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 app.component('DataTable', DataTable);
 app.component('Column', Column);
+
+import Button from 'primevue/button';
+app.component('Button', Button);
+
 app.mount('#app');
