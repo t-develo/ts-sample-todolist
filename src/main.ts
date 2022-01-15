@@ -18,4 +18,7 @@ app.component('Column', Column);
 import Button from 'primevue/button';
 app.component('Button', Button);
 
+import Dialog from 'primevue/dialog';
+app.component('Dialog', Dialog);
+
 app.mount('#app');

@@ -33,6 +33,15 @@ export function getTodoList(): Array<Todo> {
  * 状態が未完のもののみの配列を取得
  * @returns {Array<Todo>} Todoの配列
  */
-export function getFIlteredTodoList(): Array<Todo> {
+export function getFilteredTodoList(): Array<Todo> {
     return todoList.filter((todo) => !todo.isDone);
+}
+
+/**
+ * idで絞り込んだTodoを取得する
+ * @param {string} id uuid
+ * @returns {Todo} Todo
+ */
+export function getTodoById(id: string): Todo {
+    return todoList.filter((todo) => todo.id === id)[0];
 }

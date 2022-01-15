@@ -1,5 +1,9 @@
 import { Todo } from '../../../src/interface/todo';
-import { getFIlteredTodoList, getTodoList } from '../../../src/logic/getTodoList';
+import {
+    getFilteredTodoList,
+    getTodoById,
+    getTodoList,
+} from '../../../src/logic/getTodoList';
 
 const testTodoList: Array<Todo> = [
     {
@@ -37,10 +41,23 @@ const testFilteredTodoList: Array<Todo> = [
     },
 ];
 
+const todo: Todo = {
+    id: '920d6886-385c-42cd-9856-770b5b6c67e5',
+    name: 'todo1',
+    description: 'this is test todo',
+    isDone: false,
+};
+
 test('getTodoList', () => {
     expect(getTodoList()).toStrictEqual(testTodoList);
 });
 
-test('getFilteredTodoList', ()=> {
-    expect(getFIlteredTodoList()).toStrictEqual(testFilteredTodoList);
-})
+test('getFilteredTodoList', () => {
+    expect(getFilteredTodoList()).toStrictEqual(testFilteredTodoList);
+});
+
+test('getTodoById', () => {
+    expect(getTodoById('920d6886-385c-42cd-9856-770b5b6c67e5')).toStrictEqual(
+        todo
+    );
+});
